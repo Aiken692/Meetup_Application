@@ -44,13 +44,16 @@ const HomePage = (props) => {
   );
 };
 
+
+
 export async function getStaticProps(){
   // fetch data from an API
 
   return {
     props: {
       meetups: Dummy_Meetups
-    }
+    },
+    revalidate: 1
   }
 }
 
