@@ -17,7 +17,7 @@ const MeetupDetails = () => {
 export async function getStaticPaths(){
   return{
     fallback: false,
-    path:[
+    path: [
       {
         params:{
           meetupId: 'm1',
