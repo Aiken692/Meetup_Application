@@ -8,12 +8,14 @@ async function handler(req, res) {
 
         const {title, image, address, description} = data;
 
-        const client = await MongoClient.connect('mongodb+srv://Aiken692:<Seeta.c0m1>@cluster0.i0ndz.mongodb.net/meetups?retryWrites=true&w=majority');
+        const client = await MongoClient.connect(
+            "mongodb+srv://Aiken692:Seeta.c0m1@cluster0.i0ndz.mongodb.net/meetups?retryWrites=true&w=majority"
+          );
         const db = client.db();
 
         const meetupsCollection = db.collection('meetups');
 
-        const result =  await meetupsCollection.insertOne({data});
+        const result =  await meetupsCollection.insertOne(data);
 
         console.log(result);
 
